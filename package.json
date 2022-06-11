@@ -1,0 +1,18 @@
+{
+  "name": "canvas-rendering",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --project ./tsconfig.json --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@react-pdf/yoga": "^2.0.4",
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.0",
+    "process": "^0.11.10"
+  }
+}
