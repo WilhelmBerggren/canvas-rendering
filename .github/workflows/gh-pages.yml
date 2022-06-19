@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
-        token: ${{ secrets.token }}
+        with:
+          token: ${{ secrets.token }}
 
       - name: Set node version
         uses: actions/setup-node@v2
