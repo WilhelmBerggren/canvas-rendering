@@ -1,9 +1,11 @@
 {
   "name": "canvas-rendering",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "watch": "tsc --project ./tsconfig.json --watch"
+    "watch": "tsc --project ./tsconfig.json --watch",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "license": "MIT",
   "dependencies": {

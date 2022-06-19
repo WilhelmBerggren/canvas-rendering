@@ -1,0 +1,13 @@
+import { Node } from "@react-pdf/yoga";
+const root = Node.create();
+root.setHeight(100);
+root.setWidth(100);
+const container = Node.create();
+const child1 = Node.create();
+child1.setWidth(15);
+const child2 = Node.create();
+child2.setWidth(15);
+container.insertChild(child1, 0);
+container.insertChild(child2, 1);
+root.insertChild(container, 0);
+console.log(root.calculateLayout());
