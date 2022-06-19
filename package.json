@@ -9,6 +9,7 @@
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "license": "MIT",
+  "author": "Wilhelm Berggren",
   "dependencies": {
     "typescript": "^4.7.3",
     "yoga-layout-prebuilt": "^1.10.0"
