@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "tsc --project ./tsconfig.json --watch",
     "start": "parcel --public-url /",
-    "build": "parcel build --public-url /",
+    "build-gh-pages": "parcel build --public-url /canvas-rendering/",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
