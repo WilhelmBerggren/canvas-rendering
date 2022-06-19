@@ -1,4 +1,4 @@
-import Yoga, { Node } from "@react-pdf/yoga";
+import Yoga, { Node } from "yoga-layout-prebuilt";
 import { Tag, Element } from "./types";
 
 export function createElement(tag: Tag, props, ...children): Element {

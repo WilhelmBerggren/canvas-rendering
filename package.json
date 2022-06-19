@@ -4,14 +4,14 @@
   "source": "src/index.html",
   "scripts": {
     "watch": "tsc --project ./tsconfig.json --watch",
-    "start": "parcel --public-url /",
+    "start": "parcel --public-url ./",
     "build-gh-pages": "parcel build --public-url /canvas-rendering/",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
   "dependencies": {
-    "@react-pdf/yoga": "^2.0.4",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+    "yoga-layout-prebuilt": "^1.10.0"
   },
   "devDependencies": {
     "buffer": "^6.0.3",
