@@ -4,8 +4,9 @@
   "source": "src/index.html",
   "scripts": {
     "watch": "tsc --project ./tsconfig.json --watch",
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel --public-url /",
+    "build": "parcel build --public-url /",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
   "dependencies": {
