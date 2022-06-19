@@ -1,0 +1,27 @@
+name: Build and deploy to github pages
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Build:
+    name: Build and deploy to github pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Set node version
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+
+      - name: Build API
+        run: yarn build-gh-pages && yarn push-gh-pages
