@@ -1,8 +1,11 @@
-import Yoga from "@react-pdf/yoga";
-import { createElement, render } from "./my-jsx";
+import { FLEX_DIRECTION_ROW, WRAP_WRAP } from "@react-pdf/yoga";
+import { createElement, renderRoot } from "./jsx";
+
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+window.onresize = init;
+init();
 
 function init() {
-  const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   const width = window.innerWidth;
   const height = window.innerHeight;
   canvas.width = width;
@@ -18,66 +21,34 @@ function init() {
     console.log("no ctx");
     return;
   }
-  render(
+
+  renderRoot(
     ctx,
-    <box
-      id="root"
-      style={{
-        width,
-        height,
-        backgroundColor: "blue",
-        padding: 20,
-      }}
-    >
+    <box style={{ height, width, backgroundColor: "red" }}>
       <box
-        id="redChild"
         style={{
-          backgroundColor: "red",
-          margin: 20,
-        }}
-      >
-        <text id="text" style={{ fontSize: 24, color: "black", margin: 8 }}>
-          Hello Lorem Ipsum True False Boolean
-        </text>
-      </box>
-      <box
-        id="greenChild"
-        style={{
-          backgroundColor: "green",
-          flexDirection: Yoga.FLEX_DIRECTION_COLUMN,
+          backgroundColor: "blue",
+          flexDirection: FLEX_DIRECTION_ROW,
+          flexWrap: WRAP_WRAP,
         }}
       >
         <box
-          id="cyanChild"
-          style={{ width: 50, height: 50, backgroundColor: "cyan" }}
+          style={{ height: 200, width: 200, backgroundColor: "yellow" }}
         ></box>
         <box
-          id="orangeChild"
+          style={{ height: 200, width: 200, backgroundColor: "orange" }}
+        ></box>
+        <box
           style={{
-            backgroundColor: "orange",
-            flexDirection: Yoga.FLEX_DIRECTION_COLUMN,
+            height: 200,
+            width: 200,
+            backgroundColor: "green",
+            padding: 10,
           }}
         >
-          <box
-            id="yellowChild"
-            style={{
-              width: 50,
-              height: 50,
-              backgroundColor: "yellow",
-            }}
-          ></box>
-          <box
-            id="whiteChild"
-            style={{
-              width: 50,
-              height: 50,
-              backgroundColor: "white",
-            }}
-          ></box>
+          <text style={{ color: "white", fontSize: 24 }}>Lorem Ipsum</text>
         </box>
       </box>
     </box>
   );
 }
-
-init();
