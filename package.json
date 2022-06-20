@@ -4,12 +4,11 @@
   "source": "src/index.html",
   "scripts": {
     "watch": "tsc --project ./tsconfig.json --watch",
-    "start": "parcel --public-url ./",
-    "build-gh-pages": "parcel build --public-url /canvas-rendering/",
+    "start": "parcel --public-url /",
+    "build-gh-pages": "parcel build --public-url canvas-rendering",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "license": "MIT",
-  "author": "Wilhelm Berggren",
   "dependencies": {
     "typescript": "^4.7.3",
     "yoga-layout-prebuilt": "^1.10.0"
@@ -17,7 +16,6 @@
   "devDependencies": {
     "buffer": "^6.0.3",
     "parcel": "^2.6.0",
-    "process": "^0.11.10",
-    "push-dir": "^0.4.1"
+    "process": "^0.11.10"
   }
 }
