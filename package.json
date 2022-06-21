@@ -4,8 +4,8 @@
   "source": "src/index.html",
   "scripts": {
     "watch": "tsc --project ./tsconfig.json --watch",
-    "start": "parcel --public-url /",
-    "build-gh-pages": "parcel build --public-url canvas-rendering",
+    "start": "parcel --public-url ./",
+    "build-gh-pages": "parcel build --public-url ./canvas-rendering",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "license": "MIT",
