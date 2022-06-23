@@ -3,7 +3,7 @@ name: Build and deploy to github pages
 on:
   push:
     branches:
-      - main
+      - mainn # don't trigger because it is broken
 
 jobs:
   Build:
